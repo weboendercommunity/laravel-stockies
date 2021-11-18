@@ -22,7 +22,11 @@ stock management application, this application is built using framework Laravel
   $ composer install
   $ npm install
   ```
-  
+- compile the template using command
+  ``` bash
+  $ npm run dev  
+  ```
+
 - generate application key using command
   ``` bash
   $ php artisan key:generate
