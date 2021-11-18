@@ -14,7 +14,7 @@ stock management application, this application is built using framework Laravel
 
 - then go into repo directory
   ``` bash
-  $ cd mvc-stockies  
+  $ cd laravel-stockies  
   ```
 
 - install dependency, but if you dont have node.js and composer installed on your device please install it first
