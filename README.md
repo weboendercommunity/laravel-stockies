@@ -17,6 +17,11 @@ stock management application, this application is built using framework Laravel
   $ cd laravel-stockies  
   ```
 
+- copy the .env file with command
+  ``` bash
+  $ cp .env.example .env
+  ```
+
 - install dependency, but if you dont have node.js and composer installed on your device please install it first
   ``` bash
   $ composer install
