@@ -19,7 +19,7 @@ class Employee extends Migration
             $table->string('employee_fullname');
             $table->string('phone_number');
             $table->text('address');
-            $table->enum('role');
+            $table->enum('role', ['Staff', 'Manager', 'Owner', 'Admin']);
             $table->timestamps();
         });
     }
