@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Costumer;
+use App\Models\Customer;
 use Illuminate\Http\Request;
 
-class CostumerController extends Controller
+class CustomerController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class CostumerController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Costumer  $costumer
+     * @param  \App\Models\Customer  $customer
      * @return \Illuminate\Http\Response
      */
-    public function show(Costumer $costumer)
+    public function show(Customer $customer)
     {
         //
     }
@@ -52,10 +52,10 @@ class CostumerController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Costumer  $costumer
+     * @param  \App\Models\Customer  $customer
      * @return \Illuminate\Http\Response
      */
-    public function edit(Costumer $costumer)
+    public function edit(Customer $customer)
     {
         //
     }
@@ -64,10 +64,10 @@ class CostumerController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Costumer  $costumer
+     * @param  \App\Models\Customer  $customer
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Costumer $costumer)
+    public function update(Request $request, Customer $customer)
     {
         //
     }
@@ -75,10 +75,10 @@ class CostumerController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Costumer  $costumer
+     * @param  \App\Models\Customer  $customer
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Costumer $costumer)
+    public function destroy(Customer $customer)
     {
         //
     }
