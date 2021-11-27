@@ -19,6 +19,11 @@
 
     @include('layouts.sidebar')
 
+    @extends('layouts.base')
+    @section('contentSidebar')
+
+    @endsection
+
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
 
@@ -26,6 +31,12 @@
             <div id="content">
                 
                 @include('layouts.topbar')
+
+                @extends('layouts.base')
+                @section('contentTopbar')
+                    
+                @endsection
+
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
