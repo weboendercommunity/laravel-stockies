@@ -16,20 +16,18 @@ class EmployeeSeeder extends Seeder
      */
     public function run()
     {
-        $faker = Faker::create();
+        Employee::factory()->count(5)->create();
+        // $faker = Faker::create();
 
-        foreach (range(1,50) as $index) {
+        // foreach (range(1,50) as $index) {
 
-            DB::table('employees')->insert([
-                'employee_code' => $index,
-                'employee_fullname'  => $faker->name,
-                'phone_number'   => $faker->phoneNumber,
-                'address' => $faker->address,
-                'role' => 'Admin',
-                'created_at' => $faker -> dateTime(),
-                'updated_at' => $faker -> dateTime()
-            ]);
-
-        }
+        //     DB::table('employees')->insert([
+        //         'employee_code' => $faker->numerify(),
+        //         'employee_fullname' => $faker->name(),
+        //         'phone_number'   => $faker->phoneNumber(),
+        //         'address' => $faker->address(),
+        //         'role' => 'Admin',
+        //     ]);
+        // }
     }
 }
