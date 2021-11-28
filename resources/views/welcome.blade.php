@@ -7,9 +7,14 @@
 
     <title>Laravel</title>
 
+    @yield('content')
+
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+
+    @yield('js')
+    @yield('css')
 </head>
 
 <body id="page-top">
@@ -19,11 +24,6 @@
 
     @include('layouts.sidebar')
 
-    @extends('layouts.base')
-    @section('contentSidebar')
-
-    @endsection
-
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
 
@@ -31,12 +31,6 @@
             <div id="content">
                 
                 @include('layouts.topbar')
-
-                @extends('layouts.base')
-                @section('contentTopbar')
-                    
-                @endsection
-
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
