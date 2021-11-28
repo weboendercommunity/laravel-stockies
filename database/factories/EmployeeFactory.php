@@ -18,11 +18,8 @@ class EmployeeFactory extends Factory
 
     public function definition()
     {
-        $faker = Faker::create();
-
          return [
-            
-            'employee_code' => $faker->numerify("E###"),
+            'employee_code' => $this->faker->numerify("E###"),
             'employee_fullname' => $this->faker->name(),
             'phone_number' => $this->faker->phoneNumber(),
             'address' => $this->faker->address(), 
