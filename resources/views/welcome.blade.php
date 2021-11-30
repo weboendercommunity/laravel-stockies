@@ -14,7 +14,7 @@
 
 <body id="page-top">
 
-    <!-- Page Wrapper -->
+    <!-- Page Wrapper --> 
     <div id="wrapper">
 
         <!-- Sidebar -->
