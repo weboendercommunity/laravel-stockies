@@ -26,3 +26,4 @@ Route::get('/register', function () {
 
 Route::resource('employee', EmployeeController::class);
 
+Route::get('/employeelist', EmployeeController::class);

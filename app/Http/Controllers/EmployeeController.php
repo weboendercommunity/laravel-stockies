@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Employee;
-use Illuminate\Http\Request;
-use Illuminate\Routing\Controller;
+use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreEmployeeRequest;
+use App\Http\Requests\UpdateEmployeeRequest;
 
 class EmployeeController extends Controller
 {
@@ -38,14 +39,15 @@ class EmployeeController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'employee_name' => ['required', 'string'],
-             'employee_code' => ['required', 'string'],
-             'phone_number' => ['required'], 
-             'address' => ['required', 'string'],
-             'role' => ['required']
-         ]);
+            'employee_code' => 'required',
+            'employee_name' => 'required',
+            'phone_number' => 'required',
+            'address' => 'required',
+            'role' => 'required',
+        ]);
+        Employee::create($request->all());
 
-         
+        return redirect() -> route('employeelist')->with('success', 'Data Berhasil Ditambahkan');
     }
 
     /**
@@ -56,7 +58,8 @@ class EmployeeController extends Controller
      */
     public function show(Employee $employee)
     {
-        //
+        $employee_list = Employee::all();
+        return view('list', ['employees'=> $employee_list]);
     }
 
     /**
@@ -80,12 +83,12 @@ class EmployeeController extends Controller
     public function update(Request $request, Employee $employee)
     {
         $request->validate([
-            'employee_name' => ['required', 'string'],
-             'employee_code' => ['required', 'string'],
-             'phone_number' => ['required'], 
-             'address' => ['required', 'string'],
-             'role' => ['required']
-         ]);
+            'employee_code' => 'required',
+            'employee_name' => 'required',
+            'phone_number' => 'required',
+            'address' => 'required',
+            'role' => 'required',
+        ]);
     }
 
     /**
