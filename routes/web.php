@@ -26,10 +26,11 @@ Route::get('/register', function () {
     return view('/auth/register');
 });
 
+Route::get('dashboard', [AuthController::class, 'dashboard']);
 Route::resource('employee', EmployeeController::class);
-
 Route::get('/employeelist', [EmployeeController::class, 'show']);
-
 Route::get('login', [AuthController::class, 'index'])->name('login');
-
-Route::post('login', [AuthController::class, 'login'])->name('login.custom'); 
+Route::post('custom-login', [AuthController::class, 'login'])->name('login.custom');
+Route::get('register', [AuthController::class, 'registration'])->name('register-user');
+Route::post('custom-registration', [AuthController::class, 'Register'])->name('register.custom'); 
+Route::get('signout', [AuthController::class, 'signOut'])->name('signout'); 

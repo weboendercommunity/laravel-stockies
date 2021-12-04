@@ -32,4 +32,43 @@ class AuthController extends Controller
         return redirect("/welcome")->withSuccess('Login details are not valid');
     }
 
+    public function registration()
+    {
+        return view('auth.register');
+    }
+      
+
+    public function Register(Request $request)
+    {  
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required|email|unique:users',
+            'password' => 'required|min:6',
+        ]);
+           
+        $data = $request->all();
+        $check = $this->create($data);
+         
+        return redirect("/welcome")->withSuccess('You have signed-in');
+    }
+
+
+    public function create(array $data)
+    {
+      return User::create([
+        'name' => $data['name'],
+        'email' => $data['email'],
+        'password' => Hash::make($data['password'])
+      ]);
+    }    
+
+    public function dashboard()
+    {
+        if(Auth::check()){
+            return view('/welcome');
+        }
+  
+        return redirect("login")->withSuccess('You are not allowed to access');
+    }
+
 }
