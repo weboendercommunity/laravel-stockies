@@ -25,7 +25,7 @@
 
 <!-- Nav Item - Employess -->
 <li class="nav-item">
-    <a class="nav-link" href="tables.html">
+    <a class="nav-link" href="tables.blade.php">
         <i class="fa fa-user" aria-hidden="true"></i>
         <span>Employess</span>
     </a>
